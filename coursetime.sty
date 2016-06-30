@@ -1,0 +1,41 @@
+\newcounter{cthour}
+\newcounter{ctmin}
+
+%初期時刻の設定
+\newcommand{\ctset}[2]{
+	\setcounter{cthour}{#1}%1つ目の変数を「時」に
+	\setcounter{ctmin}{#2}%2つ目の変数を「分」に
+	\ctout
+}
+
+%歩行時間，休憩時間，公共交通機関での移動時間を入力するコマンド
+\newcommand{\ctwalk}[2]{%#1歩行時間,#2次の地点
+	\addtocounter{ctmin}{#1}
+	\minhourcv
+	--(#1\,min)--#2\ctout
+}
+\newcommand{\ctrest}[1]{%#1休憩時間
+	\addtocounter{ctmin}{#1}
+	\minhourcv
+	$\sim$\ctout
+}
+\newcommand{\cttran}[3]{%#1乗車時間,#2次の地点,#3交通機関名
+	\addtocounter{ctmin}{#1}
+	\minhourcv
+	--[#3\,,#1\,min]--#2\ctout
+}
+
+\def\minhourcv{
+	\loop\ifnum\value{ctmin}>60
+		\addtocounter{ctmin}{-60}
+		\addtocounter{cthour}{1}
+	\repeat
+}
+
+\newcommand{\ctout}{
+	\ifnum\value{ctmin}<10
+		\thecthour:0\thectmin
+	\else
+		\thecthour:\thectmin
+	\fi
+}
