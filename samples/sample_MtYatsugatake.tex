@@ -1,0 +1,151 @@
+\documentclass[a4paper,twocolumn,landscape]{jsarticle}
+
+\usepackage[left=1.0cm,right=1.0cm,top=1.0cm,bottom=1.0cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage{ascmac}
+\usepackage[at]{easylist}
+\usepackage{url}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{multicol}
+\usepackage[dvipdfmx]{hyperref}
+\usepackage{coursetime}
+
+\pagestyle{empty}
+\setlength{\columnseprule}{1.0pt}
+
+\title{登山計画書}
+\date{}
+\author{}
+
+\begin{document}
+\maketitle
+
+\section{実施日}
+2015.08.21--22
+
+\section{対象}
+八ヶ岳
+\begin{easylist}[itemize]
+@ 赤岳 2899\,m
+@ 阿弥陀岳 2805\,m
+\end{easylist}
+
+\section{メンバー}
+\begin{easylist}[itemize]
+@ メンバーA
+@@ 携帯 xxx-xxxx-xxxx
+@@ 自宅 xxx-xxxx-xxxx
+@ メンバーB
+@@ 携帯 xxx-xxxx-xxxx
+@@ 自宅 xxx-xxxx-xxxx
+@ メンバーC
+@@ 携帯 xxx-xxxx-xxxx
+@@ 自宅 xxx-xxxx-xxxx
+\end{easylist}
+
+\newpage
+\section{予定コースタイム}
+\subsection*{集合}
+JR東海道線，相模線 茅ヶ崎駅 6:15
+
+\subsection*{登山口まで:茅ヶ崎駅$\sim$八ヶ岳山荘}
+茅ヶ崎駅\ctset{6}{30}
+\cttran{240}{赤岳山荘}{自動車}
+
+\subsection*{1日目:美濃戸山荘$\sim$行者小屋$\sim$赤岳天望荘}
+美濃戸山荘\ctset{10}{45}
+\ctwalk{60}{}
+\ctrest{10}
+\ctwalk{60}{}
+\ctrest{10}
+\ctwalk{30}{行者小屋}
+\ctwalk{30}{}
+\ctrest{10}
+\ctwalk{55}{地蔵の頭}
+--
+赤岳天望荘
+
+\subsection*{2日目:赤岳天望荘$\sim$阿弥陀岳$\sim$赤岳鉱泉$\sim$美濃戸山荘}
+赤岳天望荘 \ctset{6}{00}
+\ctwalk{45}{赤岳}
+\ctrest{10}
+\ctwalk{70}{阿弥陀岳鞍部}
+\ctrest{10}
+\ctwalk{20}{阿弥陀岳}
+\ctrest{10}
+\ctwalk{25}{阿弥陀岳鞍部}
+\ctwalk{50}{行者小屋}
+\ctrest{10}
+\ctwalk{40}{赤岳鉱泉}
+\ctrest{60}
+\ctwalk{60}{堰堤広場}
+\ctrest{10}
+\ctwalk{30}{美濃戸山荘}
+
+\subsection*{下山予定}
+美濃戸山荘　14:00
+
+\section{エスケープルート}
+\subsection*{赤岳$\sim$行者小屋}
+赤岳\ctset{0}{0}
+\ctwalk{80}{行者小屋}
+
+\newpage
+\section{隊用装備}
+\begin{multicols}{2}
+\begin{easylist}[checklist]
+@ 医薬品
+@ 提出用計画書
+\end{easylist}
+\end{multicols}
+
+\section{個人装備}
+\begin{multicols}{2}
+\begin{easylist}[checklist]
+@ Tシャツ
+@ 防寒具
+@ 化繊下着
+@ ストレッチパンツ
+@ 雨具上下
+@ 靴下
+@ 帽子
+@ 靴紐スペア
+@ 登山靴
+@ タオル
+@ 食器
+@ ナイフ
+@ 水(2.0L以上)
+@ ライター
+@ 笛
+@ コンパス
+@ ヘッドランプ
+@ 予備電池
+@ 腕時計
+@ ザック
+@ ザックカバー　
+@ 軍手
+@ ロールペーパー
+@ ビニール袋
+@ 昼食
+@ 個人用食料
+@ $\frac{1}{25000}$地形図
+@ 筆記具
+@ 身分証
+@ 保険証
+@ 持薬
+@ 携帯電話
+@ お金
+@ 宿泊費用
+@ カメラ
+@ 温泉入浴セット
+@ 非常用食料
+@ 携帯予備充電機
+@ 非常用医薬品
+\end{easylist}
+\end{multicols}
+
+\makeatletter
+最終更新：\the\year 年\two@digits\month 月\two@digits\day 日\two@digits\hour 時\two@digits\minute 分
+\makeatother
+
+\end{document}
